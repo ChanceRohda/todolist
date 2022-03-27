@@ -10,13 +10,13 @@ import UIKit
 struct ToDoItem {
     var title: String
     var description: String
-    var isComplete: Bool
+    var isComplete: Bool = false
 }
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    var toDoItems: [ToDoItem] = [ToDoItem(title: "Walk the dog", description: "Walk the dog at 7", isComplete: false), ToDoItem(title: "Go to school", description: "Go to school at 8", isComplete: false)]
+    var toDoItems: [ToDoItem] = [ToDoItem(title: "Walk the dog", description: "Walk the dog at 7"), ToDoItem(title: "Go to school", description: "Go to school at 8")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @IBAction func addButtonDidTouch(_ sender: Any) {
-        
+        let alert = UIAlertController(title: "Add Task", message: "Add a new task", preferredStyle: .alert)
+        alert.addTextField { textfield in
+            textfield.placeholder = "Add Title"
+        }
+        alert.addTextField { textfield in
+            textfield.placeholder = "Add Description"
+        }
+        let addTaskAction = UIAlertAction(title: "Add Task", style: .default) { action in
+            if let textFields = alert.textFields {
+                //nil coalescing
+                let titleText = textFields[0].text ?? "No Title"
+                let descriptionText = textFields[1].text ?? "No Description"
+                let newToDoItem = ToDoItem(title: titleText, description: descriptionText)
+                self.toDoItems.append(newToDoItem)
+                self.tableView.reloadData()
+                alert.dismiss(animated: true, completion: nil)
+            }
+        }
+        alert.addAction(addTaskAction)
+        present(alert, animated: true, completion: nil)
     }
     
     
