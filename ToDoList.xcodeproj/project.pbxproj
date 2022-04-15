@@ -17,6 +17,10 @@
 		1FDA1CDE27F8B4340023F260 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 1FDA1CDD27F8B4340023F260 /* FirebaseAnalytics */; };
 		1FDA1CE027F8B4340023F260 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1FDA1CDF27F8B4340023F260 /* FirebaseAuth */; };
 		1FDA1CE227F8B4340023F260 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 1FDA1CE127F8B4340023F260 /* FirebaseDatabase */; };
+		1FDA1D272809E7A20023F260 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDA1D262809E7A20023F260 /* Auth.storyboard */; };
+		1FDA1D292809EA310023F260 /* AuthRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA1D282809EA310023F260 /* AuthRootViewController.swift */; };
+		1FDA1D2B2809EA6E0023F260 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA1D2A2809EA6E0023F260 /* LoginViewController.swift */; };
+		1FDA1D2D2809EAFF0023F260 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDA1D2C2809EAFF0023F260 /* CreateAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		1FA2CEE027EE20C800EB838B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FA2CEE227EE20C800EB838B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FDA1CDA27F8B1E60023F260 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1FDA1D262809E7A20023F260 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		1FDA1D282809EA310023F260 /* AuthRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRootViewController.swift; sourceTree = "<group>"; };
+		1FDA1D2A2809EA6E0023F260 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1FDA1D2C2809EAFF0023F260 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +75,11 @@
 				1FA2CED427EE20C700EB838B /* AppDelegate.swift */,
 				1FA2CED627EE20C700EB838B /* SceneDelegate.swift */,
 				1FA2CED827EE20C700EB838B /* ViewController.swift */,
+				1FDA1D282809EA310023F260 /* AuthRootViewController.swift */,
+				1FDA1D2A2809EA6E0023F260 /* LoginViewController.swift */,
 				1FA2CEDA27EE20C700EB838B /* Main.storyboard */,
+				1FDA1D262809E7A20023F260 /* Auth.storyboard */,
+				1FDA1D2C2809EAFF0023F260 /* CreateAccountViewController.swift */,
 				1FA2CEDD27EE20C800EB838B /* Assets.xcassets */,
 				1FA2CEDF27EE20C800EB838B /* LaunchScreen.storyboard */,
 				1FDA1CDA27F8B1E60023F260 /* GoogleService-Info.plist */,
@@ -144,6 +156,7 @@
 			files = (
 				1FA2CEE127EE20C800EB838B /* LaunchScreen.storyboard in Resources */,
 				1FDA1CDB27F8B1E60023F260 /* GoogleService-Info.plist in Resources */,
+				1FDA1D272809E7A20023F260 /* Auth.storyboard in Resources */,
 				1FA2CEDE27EE20C800EB838B /* Assets.xcassets in Resources */,
 				1FA2CEDC27EE20C700EB838B /* Main.storyboard in Resources */,
 			);
@@ -156,8 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FDA1D2D2809EAFF0023F260 /* CreateAccountViewController.swift in Sources */,
+				1FDA1D292809EA310023F260 /* AuthRootViewController.swift in Sources */,
 				1FA2CED927EE20C700EB838B /* ViewController.swift in Sources */,
 				1FA2CED527EE20C700EB838B /* AppDelegate.swift in Sources */,
+				1FDA1D2B2809EA6E0023F260 /* LoginViewController.swift in Sources */,
 				1FA2CED727EE20C700EB838B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +326,7 @@
 				INFOPLIST_FILE = ToDoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,7 +354,7 @@
 				INFOPLIST_FILE = ToDoList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
